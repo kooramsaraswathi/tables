@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="tableContainer"></div>
+    <script>
+      const selectedNumber = 13; 
+      const tableContainer = document.getElementById('tableContainer');
+      const tableHeader = document.createElement('h2');
+      tableHeader.textContent = `Table of ${selectedNumber}`;
+      tableContainer.appendChild(tableHeader);
+      const table = document.createElement('table');
+      for (let i = 1; i <= 10; i++) {
+        const row = document.createElement('tr');
+        const multiplicand = document.createElement('td');
+        multiplicand.textContent = `${selectedNumber} x ${i}`;
+        row.appendChild(multiplicand);
+        const product = document.createElement('td');
+        product.textContent = `${selectedNumber * i}`;
+        row.appendChild(product);
+        table.appendChild(row);
+      }
+      tableContainer.appendChild(table);
+    </script>
+  </body>
+</html>
